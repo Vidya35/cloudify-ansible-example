@@ -2,7 +2,7 @@
 This is simple example that use cloudify-ansible-plugin to run a hello world app using supervisor. 
 In this tutorial we will start a Cloudify Manager within a Vagrant box on your laptop, and run the helloworld app through an ansible playbook.
 
-Note: - This tutorial uses the 3.3 version of cloudify manager and need net access.
+Note: - This tutorial uses the 3.3 version of cloudify manager.
 
 ##Pre-Requisites:
 
