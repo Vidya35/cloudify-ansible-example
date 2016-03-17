@@ -1,0 +1,13 @@
+---
+- hosts: local
+  tasks:
+  - name: Install supervisor
+    pip: name=supervisor
+  - name: Create a supervisor.sock file
+    copy: content="" dest=/home/vagrant/cloudify/supervisor.sock
+  - name: Change Permission
+    file: path=/home/vagrant/cloudify/blueprints/supervisor/scripts/hello.sh
+          mode=777
+  - name: Start Hello World
+    shell: "/home/vagrant/cloudify/bin/supervisord -c /home/vagrant/cloudify/blueprints/supervisor/scripts/supervisord.conf"
+   
